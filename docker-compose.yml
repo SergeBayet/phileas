@@ -5,16 +5,16 @@
       image: "becodeorg/node"
       environment:
         NODE_ENV: "development"
-        APP_PORT: {[{node_port}]}
+        APP_PORT: 12345
       volumes:
         - "./package.json:/src/app/package.json"
         - "./node_modules:/src/app/node_modules"
         - "./bin:/src/app/bin"
       expose:
-        - "{[{node_port}]}"
+        - "12345"
         - "9229"
       ports:
-        - "80:{[{node_port}]}"
+        - "81:12345"
         - "9229"
       command: "nodemon --inspect=0.0.0.0:9229 --watch bin/server bin/server/index.js"
     mongo:
@@ -26,7 +26,7 @@
         - "mongo_db:/data/db"
         - "./_db:/usr/dump"
       environment:
-        MONGO_INITDB_ROOT_USERNAME: "{[{mongo_username}]}"
-        MONGO_INITDB_ROOT_PASSWORD: "{[{mongo_password}]}"
+        MONGO_INITDB_ROOT_USERNAME: "dev"
+        MONGO_INITDB_ROOT_PASSWORD: "dev"
   volumes:
     mongo_db:

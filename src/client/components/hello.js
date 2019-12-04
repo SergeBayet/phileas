@@ -4,7 +4,7 @@ const HelloWorld = () => (
     <div>
         <h1>{"Hello, world!"}</h1>
         <hr />
-        <small>{"{[{name}]}"}</small>
+        <small>{"phileas"}</small>
     </div>
 );
 

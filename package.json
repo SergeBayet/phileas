@@ -1,12 +1,12 @@
 {
-  "name": "{[{name}]}",
+  "name": "phileas",
   "version": "0.0.1",
-  "description": "{[{description}]}",
-  "author": "{[{author}]}",
+  "description": "Learning platform",
+  "author": "Serge Bayet / Alessandro Aloisio",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "mongo:import:TABLE": "docker-compose exec mongo mongoimport --authenticationDatabase admin -u {[{mongo_username}]} -p {[{mongo_password}]} -c TABLE -d DATABASE --file /usr/dump/TABLE.json --jsonArray",
+    "mongo:import:TABLE": "docker-compose exec mongo mongoimport --authenticationDatabase admin -u dev -p dev -c TABLE -d DATABASE --file /usr/dump/TABLE.json --jsonArray",
     "lint": "npx eslint --fix --cache --ignore-pattern 'docs/*' src",
     "build:server": "npx babel src/server -s --out-dir bin/server",
     "work:server": "npx babel src/server -s --watch --verbose --out-dir bin/server",
@@ -46,6 +46,7 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mongoose": "^5.7.13",
     "react": "^16.9.0",
