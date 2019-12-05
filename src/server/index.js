@@ -1,22 +1,20 @@
 import express from "express";
 import path from "path";
+
+require('dotenv').config();
 const logger = require('morgan');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const user = require("./routes/user.route").default;
 const resources = require("./routes/resource.route").default;
-const jwt = require('jsonwebtoken');
-
-const { APP_PORT } = process.env;
-const url = "mongodb://dev:dev@mongo:27017";
+const { APP_PORT, SECRET_TOKEN_KEY, SECRET_REFRESH_KEY, MONGODB_URI } = process.env;
 const app = express();
-app.set('secretKey', 'AroundTheWorldInEightyDays');
+app.set('secretTokenKey', SECRET_TOKEN_KEY);
+app.set('secretRefreshKey', SECRET_REFRESH_KEY);
+app.set('refreshTokens', {});
+// Connection to Mongo DB 
 
-// Connection to Mongo DB
-
-const mongoDB = process.env.MONGODB_URI || url;
-
-mongoose.connect(mongoDB, {
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   dbName: "phileas",
@@ -39,21 +37,9 @@ app.use(express.static(path.resolve(__dirname, "../../bin/client")));
 // Api routes towards controllers
 
 app.use("/user", user);
-app.use("/resources", validateUser, resources);
+app.use("/resources", resources);
 
-// User Validation using json web token
 
-function validateUser(req, res, next) {
-  jwt.verify(req.headers['x-access-token'], req.app.get('secretKey'), function (err, decoded) {
-    if (err) {
-      res.json({ status: "error", message: err.message, data: null });
-    } else {
-      // add user id to request
-      req.body.userId = decoded.id;
-      next();
-    }
-  });
-}
 
 // Listening to the port
 

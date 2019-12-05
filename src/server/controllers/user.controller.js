@@ -24,8 +24,11 @@ export function user_authenticate(req, res, next) {
       return next(err);
     }
     if (bcrypt.compareSync(req.body.password, user.password)) {
-      const token = jwt.sign({ id: user._id }, req.app.get('secretKey'), { expiresIn: '1h' });
-      res.json({ status: "success", message: "user found!!!", data: { user: user, token: token } });
+      const token = jwt.sign({ id: user._id }, req.app.get('secretTokenKey'), { expiresIn: 300 });
+      const refresh = jwt.sign({ id: user.id }, req.app.get('secretRefreshKey'), { expiresIn: 88600 });
+      req.app.set('refreshTokens', { ...req.app.get('refreshTokens'), refresh });
+      res.json({ status: "success", message: "user found!!!", data: { user: user, token: token, refresh: refresh } });
+
     }
     else {
       res.json({ status: "error", message: "Invalid email/password!!!", data: null });
