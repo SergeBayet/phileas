@@ -17,7 +17,25 @@ export function user_create(req, res, next) {
     res.send("User created successfully");
   });
 }
+export function user_token(req, res, next) {
+  const userId = req.body.userId;
+  const refreshToken = req.body.refreshToken;
+  let refreshTokens = req.app.get('refreshTokens');
+  console.log(refreshTokens);
+  if ((refreshToken in refreshTokens) && (refreshTokens[refreshToken] == userId)) {
 
+    const token = jwt.sign({ id: userId }, req.app.get('secretTokenKey'), { expiresIn: 300 })
+    const refresh = jwt.sign({ id: userId }, req.app.get('secretRefreshKey'), { expiresIn: 88600 });
+
+    refreshTokens[refresh] = userId;
+    req.app.set('refreshTokens', refresh);
+    console.log(req.app.get('refreshTokens'));
+    res.json({ status: "success", message: "token refreshed", data: { token: token, refresh: refresh } });
+  }
+  else {
+    res.send(401)
+  }
+}
 export function user_authenticate(req, res, next) {
   User.findOne({ email: req.body.email }, (err, user) => {
     if (err) {
@@ -25,13 +43,16 @@ export function user_authenticate(req, res, next) {
     }
     if (bcrypt.compareSync(req.body.password, user.password)) {
       const token = jwt.sign({ id: user._id }, req.app.get('secretTokenKey'), { expiresIn: 300 });
-      const refresh = jwt.sign({ id: user.id }, req.app.get('secretRefreshKey'), { expiresIn: 88600 });
-      req.app.set('refreshTokens', { ...req.app.get('refreshTokens'), refresh });
-      res.json({ status: "success", message: "user found!!!", data: { user: user, token: token, refresh: refresh } });
+      const refresh = jwt.sign({ id: user._id }, req.app.get('secretRefreshKey'), { expiresIn: 88600 });
+      let refreshs = req.app.get('refreshTokens');
+      refreshs[refresh] = user._id;
+      req.app.set('refreshTokens', refreshs);
+      console.log(req.app.get('refreshTokens'));
+      res.json({ status: "success", message: "user found", data: { user: user, token: token, refresh: refresh } });
 
     }
     else {
-      res.json({ status: "error", message: "Invalid email/password!!!", data: null });
+      res.json({ status: "error", message: "Invalid email/password", data: null });
     }
   });
 };

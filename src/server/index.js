@@ -11,7 +11,7 @@ const { APP_PORT, SECRET_TOKEN_KEY, SECRET_REFRESH_KEY, MONGODB_URI } = process.
 const app = express();
 app.set('secretTokenKey', SECRET_TOKEN_KEY);
 app.set('secretRefreshKey', SECRET_REFRESH_KEY);
-app.set('refreshTokens', {});
+app.set('refreshTokens', []);
 // Connection to Mongo DB 
 
 mongoose.connect(MONGODB_URI, {
