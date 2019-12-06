@@ -17,11 +17,22 @@ export function user_create(req, res, next) {
     res.send("User created successfully");
   });
 }
+export function user_token_reject(req, res, next) {
+
+  const refreshToken = req.body.refreshToken;
+  let refreshTokens = req.app.get('refreshTokens');
+  if (refreshToken in refreshTokens) {
+    delete refreshTokens[refreshToken];
+    res.json({ status: "success", message: "token rejected" })
+  }
+  res.json({ status: "error", message: "token doesn't exist" })
+
+}
 export function user_token(req, res, next) {
+
   const userId = req.body.userId;
   const refreshToken = req.body.refreshToken;
   let refreshTokens = req.app.get('refreshTokens');
-  console.log(refreshTokens);
   if ((refreshToken in refreshTokens) && (refreshTokens[refreshToken] == userId)) {
 
     const token = jwt.sign({ id: userId }, req.app.get('secretTokenKey'), { expiresIn: 300 })
@@ -29,7 +40,6 @@ export function user_token(req, res, next) {
 
     refreshTokens[refresh] = userId;
     req.app.set('refreshTokens', refresh);
-    console.log(req.app.get('refreshTokens'));
     res.json({ status: "success", message: "token refreshed", data: { token: token, refresh: refresh } });
   }
   else {
