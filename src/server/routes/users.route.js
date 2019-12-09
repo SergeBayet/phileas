@@ -10,7 +10,7 @@ import {
 // CRUD routes
 
 router.post("/", create);
-router.get("/:id", getById);
+router.get("/", getById);
 router.put("/:id", updateById);
 router.delete("/:id", deleteById);
 

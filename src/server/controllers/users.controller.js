@@ -58,7 +58,7 @@ export function login(req, res, next) {
       let refreshs = req.app.get('refreshTokens');
       refreshs[refresh] = user._id;
       req.app.set('refreshTokens', refreshs);
-      console.log(req.app.get('refreshTokens'));
+
       res.json({ status: "success", message: "user found", data: { user: user, token: token, refresh: refresh } });
 
     }
@@ -69,13 +69,26 @@ export function login(req, res, next) {
 };
 
 export function getById(req, res, next) {
-  User.findById(req.params.id, (err, user) => {
-    if (err) {
-      res.json({ status: "error", message: "User id doesn't exist", data: null });
-      return;
-    }
-    res.json({ status: "success", message: "User retrieved", data: user });
-  });
+  console.log(req.query);
+  if (req.query.id !== undefined) {
+    User.findById(req.query.id, 'name email admin', (err, user) => {
+      if (err) {
+        res.json({ status: "error", message: "User id doesn't exist", data: null });
+        return;
+      }
+      res.json({ status: "success", message: "User retrieved", data: user });
+    });
+  }
+  else if (req.query.query !== undefined) {
+    User.find({ name: new RegExp(req.query.query, "i") }, 'name email admin', (err, users) => {
+      if (err) {
+        res.json({ status: "error", message: "No results", data: null });
+        return;
+      }
+      res.json({ status: "success", message: "Users list retrieved", count: users.length, data: users });
+    })
+  }
+
 }
 
 export function updateById(req, res, next) {
