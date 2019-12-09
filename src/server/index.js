@@ -5,8 +5,8 @@ require('dotenv').config();
 const logger = require('morgan');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const user = require("./routes/user.route").default;
-const resources = require("./routes/resource.route").default;
+const routes = require("./routes/root.route");
+
 const { APP_PORT, SECRET_TOKEN_KEY, SECRET_REFRESH_KEY, MONGODB_URI } = process.env;
 const app = express();
 app.set('secretTokenKey', SECRET_TOKEN_KEY);
@@ -36,10 +36,7 @@ app.use(express.static(path.resolve(__dirname, "../../bin/client")));
 
 // Api routes towards controllers
 
-app.use("/user", user);
-app.use("/resources", resources);
-
-
+app.use("/", routes);
 
 // Listening to the port
 

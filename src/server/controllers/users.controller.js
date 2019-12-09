@@ -1,34 +1,35 @@
-import User from "../models/user.model";
+import User from "../models/users.model";
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-export function user_create(req, res, next) {
-  const user = new User({
+export async function create(req, res, next) {
+
+  await User.create({
     name: req.body.name,
     email: req.body.email,
     password: req.body.password,
-  });
-  user.save(err => {
-    console.log(user);
+  }, function (err) {
     if (err) {
-      console.log(err);
-      return next(err);
+
+      res.json({ status: "error", message: err, data: null });
+      return;
     }
-    res.send("User created successfully");
+    res.json({ status: "success", message: "User created", data: null });
   });
 }
-export function user_token_reject(req, res, next) {
+export function tokenReject(req, res, next) {
 
   const refreshToken = req.body.refreshToken;
   let refreshTokens = req.app.get('refreshTokens');
   if (refreshToken in refreshTokens) {
     delete refreshTokens[refreshToken];
     res.json({ status: "success", message: "token rejected" })
+    return;
   }
   res.json({ status: "error", message: "token doesn't exist" })
 
 }
-export function user_token(req, res, next) {
+export function token(req, res, next) {
 
   const userId = req.body.userId;
   const refreshToken = req.body.refreshToken;
@@ -43,10 +44,10 @@ export function user_token(req, res, next) {
     res.json({ status: "success", message: "token refreshed", data: { token: token, refresh: refresh } });
   }
   else {
-    res.send(401)
+    res.send(401).json({ status: "error", message: "token undefined", data: null });
   }
 }
-export function user_authenticate(req, res, next) {
+export function login(req, res, next) {
   User.findOne({ email: req.body.email }, (err, user) => {
     if (err) {
       return next(err);
@@ -67,30 +68,33 @@ export function user_authenticate(req, res, next) {
   });
 };
 
-export function user_details(req, res, next) {
+export function getById(req, res, next) {
   User.findById(req.params.id, (err, user) => {
     if (err) {
-      return next(err);
+      res.json({ status: "error", message: "User id doesn't exist", data: null });
+      return;
     }
-    res.send(user);
+    res.json({ status: "success", message: "User retrieved", data: user });
   });
 }
 
-export function user_update(req, res, next) {
+export function updateById(req, res, next) {
   User.findByIdAndUpdate(req.params.id, { $set: req.body }, (err, user) => {
     if (err) {
-      return next(err);
+      res.json({ status: "error", message: "User id doesn't exist", data: null });
+      return;
     }
-    res.send("User udpated.");
+    res.json({ status: "success", message: "User updated", data: user });
   });
 }
 
-export function user_delete(req, res, next) {
+export function deleteById(req, res, next) {
   User.findByIdAndRemove(req.params.id, (err, user) => {
     if (err) {
-      return next(err);
+      res.json({ status: "error", message: "User id doesn't exist", data: null });
+      return;
     }
-    res.send("User deleted");
+    res.json({ status: "success", message: "User deleted", data: user });
   });
 }
 

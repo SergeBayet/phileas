@@ -2,8 +2,9 @@ import { Router } from "express";
 import { validateUser } from "../middlewares/validateUser";
 const router = Router();
 
-import { create } from "../controllers/resource.controller";
+import { create, getAll } from "../controllers/resources.controller";
 
-router.post("/create", validateUser, create);
+router.post("/", validateUser, create);
+router.get("/", getAll);
 
 export default router;

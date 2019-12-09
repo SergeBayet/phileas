@@ -3,20 +3,14 @@ const Schema = _Schema;
 
 const ResourceSchema = new Schema({
   label: { type: String, trim: true, required: true, max: 255 },
-  resource: { type: String, trim: true, required: true },
+  resource: { type: String, trim: true },
   description: { type: String },
   estimated_time: { type: Number },
-  repetitions: {
-    mode: { type: String },
-    times: { type: Number },
-    cron: { type: String },
-    human_readable: { type: String },
-  },
-  type: { type: String },
+  type_resource: { type: String },
   private: { type: Boolean },
   id_user: { type: Schema.Types.ObjectId },
-  created_at: { type: Date, default: Date.now }
-});
-
+  created_at: { type: Date, default: Date.now },
+  categories: [{ type: Schema.Types.ObjectId, ref: 'Category' }]
+}, { collection: 'resources' });
 
 export default model("Resource", ResourceSchema);
