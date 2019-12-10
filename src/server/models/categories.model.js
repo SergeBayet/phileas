@@ -22,4 +22,15 @@ CategorySchema.statics.getChildren = function (idCategory) {
   })
 }
 
+CategorySchema.statics.getParents = function (idCategory) {
+  return new Promise((resolve, reject) => {
+    this.find({ _id: idCategory }, { parents: true }).populate('parents').exec((err, docs) => {
+      if (err) {
+        return reject(err)
+      }
+      resolve(docs)
+    })
+  })
+}
+
 export default model("Category", CategorySchema);

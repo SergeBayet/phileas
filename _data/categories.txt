@@ -1,0 +1,862 @@
+Science
+  Formal sciences
+    Decision theory
+    Logic
+    Mathematics
+      Algebra
+        Group theory
+          Group representation
+        Ring theory
+        Field theory
+        Linear algebra
+          Vector space
+        Multilinear algebra
+        Lie algebra
+        Associative algebra
+        Non-associative algebra
+        Universal algebra
+        Homological algebra
+        Category theory
+        Lattice theory
+          Order theory
+        Differential algebra
+      Analysis
+        Real analysis
+          Calculus
+        Complex analysis
+        Functional analysis
+          Operator theory
+        Non-standard analysis
+        Harmonic analysis
+        p-adic analysis
+        Ordinary diffrential equations
+        Partial differential equations
+      Probability theory
+        Measure theory
+        Ergodic theory
+        Stochastic process
+      Geometry
+        Topology
+        General topology
+        Algebraic topology
+        Geometric topology
+        Differential topology
+        Algebraic geometry
+        Differential geometry
+        Projective geometry
+        Affine geometry
+        Non-Euclidean geometry
+        Convex geometry
+        Discrete geometry
+      Trigonometry
+      Number theory
+        Analytic number theory
+        Algebraic number theory
+        Geometric number theory
+      Logic / Foundations of mathematics
+        Set theory
+        Proof theory
+        Model theory
+        Recursion theory
+        Modal Logic
+        Intuitionistic Logic
+      Applied mathematics
+        Mathematical Statistics
+          Probability
+          Econometrics
+          Actuarial science
+          Demography
+        Approximation theory
+        Numerical analysis
+        Optimization (Mathematical programming)
+          Operations research
+          Linear programming
+        Dynamical Systems
+          Chaos theory
+          Fractal geometry
+        Mathematical Physics
+          Quantum field theory
+          Statistical mechanics
+        Information theory
+        Cryptography
+        Combinatorics
+          Coding theory
+        Graph theory
+        Game theory
+    Statistics
+      Computational Statistics
+        Data mining
+        Regression
+        Simulation
+          Bootstrap (statistics)
+      Design of experiments
+        Block Design
+        Analysis of variance
+        Response surface methodology
+      Engineering statistics
+      Spatial statistics
+      Social statistics
+      Statistical modelling
+        Biostatistics
+          Epidemiology
+        Multivariate analysis
+          Structural equation model
+          Time series
+        Reliability theory
+        Quality control
+      Statistical theory
+        Decision theory
+        Mathematical statistics
+          Probability
+      Sample survey
+        Sampling theory
+        Survey methodology
+    Systems theory
+      Chaos theory
+      Complex systems
+      Cybernetics
+        Biocybernetics
+        Engineering cybernetics
+        New cybernetics
+        Second-order cybernetics
+      Control theory
+        Control engineering
+        Control systems
+        Dynamical systems
+      Operations research
+      System dynamics
+        Systems analysis
+      Systems theory
+        Developmental systems thoery
+        General systems theory
+        Linear time-invariant systems
+        Mathematical system theory
+        Systems biology
+        Systems ecology
+        Systems engineering
+        Systems neuroscience
+        Systems psychology
+    Theoretical computer science / Computer science
+      Theory of computation
+        Automata theory
+          Formal languages
+        Computability theory
+        Computational complexity theory
+        Concurrency theory
+      Algorithms
+        Randomized algorithms
+        Distributed algorithms
+        Parallel algorithms
+      Data structures
+      Computer architecture
+        VLSI design
+      Operating systems
+      Computer communications (networks)
+        Information theory
+        Internet
+          World wide web
+        Wireless computing
+          Mobile computing
+      Computer security
+        Reliability
+        Cryptography
+        Fault-tolerant computing
+      Distributed computing
+        Grid computing
+      Parallel computing
+        High-performance computing
+      Quantum computing
+      Computer graphics
+        Image processing
+        Scientific visualization
+        Computational geometry
+      Software engineering
+        Formal methods
+          Formal verification
+      Programming languages
+        Programming paradigms
+          Object-oriented programming
+          Functional programming
+        Program semantics
+        Type theory
+        Compilers
+        Concurrent programming languages
+      Information science
+        Database
+          Relational database
+          Distributed database
+          Object database
+        Multimedia
+        Hypermedia
+        Data mining
+        Information retrieval
+    Artificial intelligence
+      Automated reasoning
+      Computer vision
+      Machine learning
+        Artificial neural network
+      Natural language processing
+        Computational linguistics
+      Expert systems
+      Robotics
+    Human-computer interaction
+      Numerical analysis
+      Algebraic (symbolic) computation
+      Computational number theory
+      Computational mathematics
+      Computational biology / Bioinformatics
+      Computational science
+      Computational chemistry
+      Computational neuroscience
+      Computer-aided engineering
+        Finite element analysis
+        Computational fluid dynamics
+      Computational economics
+      Computational sociology
+      Computational finance
+      Humanities computing / Digital Humanities
+    Information systems
+      Business informatics
+      Information technology
+      Management information systems
+      Health informatics
+  Natural sciences
+    Physical science
+      Astronomy
+        Astrobiology / Exobiology / Exopaleontology / Bioastronomy
+        Astrodynamics
+        Astrophysics
+        Astrometry
+        Cosmology
+        Extragalactic astronomy
+        Galactic astronomy
+        Physical cosmology
+        Planetary science
+        Stellar astronomy
+      Physics
+        Acoustics
+        Agrophysics
+          Soli physics
+        Atmosphere physics
+        Atomic, molecular, and optical physics
+        Biophysics
+          Medial physics
+          Neurophysics
+        Chemical physics
+        Computational physics
+        Condensed matter physics
+        Cryogenics
+        Dynamics
+        Econophysics
+        Electromagnetism
+        Geophysics
+        Material physics
+        Mathematical physics
+        Mechanics
+          Biomechanics
+          Classical mechanics
+          Continuum mechanics
+          Fluid mechanics
+          Quantum mechanics
+          Thermodynamics
+        Nuclear physics
+        Optics
+        Particle physics
+        Psychophysics
+        Plasma physics
+        Polymer physics
+        Quantum physics
+        Relativity
+        Statics
+        Solid state physics
+        Vehicle dynamics
+      Chemistry
+        Analytical chemistry
+        Astrochemistry
+          Cosmochemistry
+        Atmospheric chemistry
+        Biochemistry
+          Agrochemistry
+          Bioinorganic chemistry
+          Bioorganic chemistry
+          Biophysical chemistry
+          Environmental chemistry
+          Immunochemistry
+          Medicinal chemistry
+          Pharmacology
+          Natural product chemistry
+          Neurochemistry
+        Computational chemistry
+          Chemo-informatics
+          Molecular mechanics
+        Flavor chemistry
+        Flow chemistry
+        Geochemistry
+          Aqueous geochemistry
+          Isotope geochemistry
+          Ocean chemistry
+          Regional, environmental and exploration geochemistry
+        Inorganic chemistry
+        Nuclear chemistry
+          Radiochemistry
+        Organic chemistry
+          Petrochemistry
+        Organometallic chemistry
+        Photochemistry
+        Physical chemistry
+          Chemical kinetics
+          Chemical thermodynamics
+          Electrochemistry
+          Femtochemistry
+          Mathematical chemistry
+          Mechanochemistry
+          Physical organic chemistry
+          Quantum chemistry
+          Sonochemistry
+          Stereochemistry
+          Supramolecular chemistry
+          Thermochemistry
+        Phytochemistry
+        Polymer chemistry
+        Solid-state chemistry
+        Chemical biology
+        Chemical oceanography
+        Chemical physics
+        Materials science
+        Nanotechnology
+        Oenology
+        Spectroscopy
+        Surface science
+      Earth science
+        Atmospheric sciences
+        Biogeography
+        Cartography
+        Climatology
+        Coastal geography
+        Environmental science
+          Ecology
+            Freshwater biology
+            Marine biology
+            Parasitology
+            Population dynamics
+          Environmental chemistry
+          Environmental soil science
+          Environmental geology
+          Toxicology
+          Geodesy
+        Geography
+        Geoinformatics
+        Geology
+          Planetary geology
+        Geomorphology
+        Geostatistics
+        Geophysics
+        Glaciology
+        Hydrology
+        Hydrogeology
+        Mineralogy
+        Oceanography
+        Paleoclimatology
+        Paleontology
+        Petrology
+        Limnology
+        Seismology
+        Soil science
+        Topography
+        Volcanology
+    Science of living things / Life science / Biology
+      Aerobiology
+      Agriculture
+      Anatomy
+        Human anatomy
+      Biochemistry
+      Bioengineering
+      Biogeography
+      Bioinformatics
+      Biomathematics / Mathematical biology
+      Biomechanics
+      Biomedical research
+      Biophysics
+      Biotechnology
+      Building biology
+      Botany
+      Cell biology
+      Conservation biology
+      Chronobiology
+      Developmental biology
+        Embryology
+        Gerontology
+      Ecology
+      Environmental biology
+      Epidemiology
+      Evolution
+        Evolutionary biology
+          Evolutionary developmental biology
+        Paleobiology
+          Paleontology
+      Genetics
+        Genomics
+        Proteomics
+        Population genetics
+      Histology
+      Integrative biology
+      Limnology
+      Marine biolpogy
+      Microbiology
+        Bacteriology
+        Virology
+      Molecular biology
+        Structural biology
+      Morphology
+      Mycology
+      Oceanography
+      Oncology
+      Population biology
+        Population ecology
+        Population genetics
+      Pathobiology / Pathology
+      Parasitology
+      Phramacology
+      Physiology
+        Immunology
+        Kinesiology
+        Neurobiology
+          Neuroscience
+        Histology
+      Phytopathology
+      Psychobiology
+      Sociobiology
+      Systematics
+        Cladistics
+        Phylogeny
+        Taxonomy
+      Zoology
+        Arachnology
+          Acarology
+        Entomology
+          Myrmecology
+          Coleopterology
+          Lepidopterology
+        Ethology
+        Helminthology
+        Herpetology
+        Ichtyology
+        Malacology
+        Mammalogy
+          Cetology
+          Physical anthropology
+        Nematology
+        Ornithology
+  Social sciences
+    Anthropology
+      Anthropology of religion
+      Applied antrhopology
+      Archaeology
+      Cultural antrhopology
+      Ethnobiology
+      Ethnobotany
+      Ethnography
+      Ethnology
+      Ethnopoetics
+      Evolutionary anthropology
+      Experimental archaeology
+      Historical archaeology
+      Linguistic anthropology
+      Medical anthropology
+      Physical anthropology
+      Psychological antrhopology
+      Zooarchaeology
+      Antrhozoology
+    Arts / The arts
+      Art music / Classical music / Cultivated music / Serious music / Canonic music
+        Ancient music
+        Early music
+          Medieval era
+            Ars antiqua
+            Ars nova
+            Ars subtilior
+          Renaissance era
+        Common-practice period
+          Baroque era
+          Galant music era
+          Classical era
+          Romantic era
+        20th and 21st centuries
+          Modernist era
+            Impressionism
+            Expressionism
+            Neoclassicism
+          Postmodern era / Contemporary
+            Experimental
+            Minimalism
+      Culinary arts
+      Literature
+      Performing arts
+      Visual arts
+        Painting
+        Drawing
+        Printmaking
+        Sculpture
+        Ceramics
+        Photography
+        Video
+        Filmmaking
+        Design
+        Crafts
+        Architecture
+    Business studies
+      Accountancy
+      Finance
+      Human resource management
+      Management
+      Marketing
+      Organizational studies
+      Economics
+    Civics
+    Cognitive Science
+    Criminology
+    Cultural studies
+    Demography
+    Development studies
+    Economics
+      Macroeconomics
+      Microeconomics
+      Behavioural economics
+      Bioeconomics
+      Comparative economics
+        Socialist economics
+      Development economics
+      Ecological economics
+      Economic geography
+      Economic history
+      Economic sociology
+      Energy economics
+      Entrepreneurial economics
+      Environmental economics
+      Evolutionary economics
+      Heterodox economics
+        Green economics
+        Feminist economics
+        Islamic economics
+      Industrial organization
+      International economics
+      Institutional economics
+      Labor economics
+      Law and economics
+      Managerial economics
+      Monetary economics
+      Neoclassical economics
+      Neuroeconomics
+      Public finance
+      Public economics
+      Real estate economics
+      Resource economics
+      Welfare economics
+      Political economy
+      Socioeconomics
+      Transport economics
+      Economic methodology
+        Computational economics
+        Econometrics
+          Mathematical economics
+          Economic statistics
+            Time series
+        Experimental economics
+    Education
+    Environmental studies
+    Folkloristics
+    Gender and sexuality studies
+    Geography
+      Cartography
+      Human geography
+        Critical geography
+        Cultural geography
+        Feminist geography
+        Economic geography
+        Development geography
+        Historical geography
+        Time geography
+        Political geography / Geopolitics
+        Marxist geography
+        Military geography
+        Strategic geography
+        Population geography
+        Social geography
+        Behavioral geography
+        Children's geographies
+        Health geography
+        Tourism geography
+        Urban geography
+      Environmental geography
+      Physical geography
+        Biogeography
+        Climatology
+        Paleoclimatology
+        Coastal geography
+        Geomorphology
+        Goedesy
+        Hydrology
+        Hydrography
+        Glaciology
+        Limnology
+        Oceanography
+        Pedology
+        Landscape ecology
+        Paleogeography
+      Regional geography
+    Gerontology
+    History
+    Industrial relations
+    Information science
+    International studies
+    Law
+    Legal management
+      Paralegal studies
+    Library science
+    Linguistics
+      Anthropological linguistics
+      Applied linguistics
+      Biolinguistics
+      Clinical linguistics / Speech and language pathology
+      Cognitive linguistics
+      Comparative linguistics
+      Computational linguistics
+      Developmental linguistics
+        Language acquisition
+      Dialectology
+        Dialectometry
+      Discourse analysis
+      Etymology
+      Evolutionary linguistics
+      Forensic linguistics
+      Geolinguistics
+      Historical linguistics
+      Language
+      Lexis
+      Linguistic typology
+      Morphology
+      Neurolinguistics
+      Philology
+      Phonetics
+      Phonology
+      Phraseology
+      Pragmatics
+      Psycholinguistics
+      Sociolinguistics
+      Speech science
+      Stylistics
+      Syntax
+      Semantics
+      Writing systems / Orthography
+    Management
+    Media studies
+      Communication studies
+    Philosophy
+      Philosophy of language
+      Philosophy of information
+      Political philosophy
+      Epistemology
+      Ethics
+      Logic
+      Philosophy of mind
+      Philosophy of science
+      Social philosophy
+      Aesthetics
+      Philosophy of mathematics
+      Philosophy of education
+    Planning
+      Environmental planning
+      Urban planning
+      Regional planning
+    Political science
+      Comparative politics
+      Game theory
+      Geopolitics
+        Political geography
+      Ideology
+      Political economy
+      Political psychology
+      Psephology
+      Voting systems
+      Public administration
+        Public policy
+        Public health
+        Local government studies
+        International politics
+      International relations theory
+    Psychology
+      Applied psychology
+        Psychology testing
+        Clinical psychology
+        Community psychology
+        Consumer behaviour
+        Counseling psychology
+        Educational psychology
+        Forensic psychology
+        Health psychology
+        Industrial and organizational psychology
+        Legal psychology
+        Media psychology
+        Military psychology
+        Occupational health psychology
+        Pastoral psychology
+        Political psychology
+        Psychometrics
+        School psychology
+        Sport psychology
+        Systems psychology
+        Traffic psychology
+      Behavior analysis
+      Biopsychology
+      Cognitive psychology
+      Clinical psychology
+      Cultural psychology
+      Developmental psychology
+      Educational psychology
+      Evolutionary psychology
+      Experimental psychology
+      Forensic psychology
+      Health psychology
+      Humanistic psychology
+      Industrial and organizational psychology
+      Music therapy
+      Neuropsychology
+      Personality psychology
+      Psychometrics
+      Psychology of religion
+      Psychophysics
+      Sensation and perception psychology
+    Public administration
+    Religious studies
+    Science and technology studies
+    Social work
+    Sociology
+      Criminology
+      Demography
+      Urban sociology
+      Rural sociology
+    Sustainable development
+      Substainable agriculture
+    Sustainability studies
+  Applied sciences
+    Agronomy
+      Animal husbandry
+      Aquaculture
+        Algaculture
+        Mariculture
+      Agriculture
+        Cuniculture
+        Fungiculture
+        Heliciculture
+        Olericulture
+        Sericulture
+      Food science
+      Forestry
+        Arboriculture
+        Silviculture
+      Horticulture
+        Floriculture
+        Hydroculture
+          Hydroponics
+      Permaculture
+    Architecture
+      Architectural engineering
+      Building science
+    Computing technology
+    Education
+    Electronics
+    Energy technology
+    Energy storage
+    Engineering
+      Aeronautical engineering
+        Aerospace engineering
+      Agricultual engineering
+        Agricultural science
+      Applied engineering
+      Biomedical engineering
+      Bioengineering
+      Civil engineering
+      Computer engineering
+        Artificial intelligence
+      Electrical engineering
+      Engineering technology
+      Environmental engineering science
+      Industrial engineering
+        Ceramic engineering
+        Control engineering
+        Manufacturing engineering
+      Language engineering
+      Marine engineering
+      Materials science and engineering
+        Materials engineering
+      Mechanical engineering
+      Mining engineering
+      Nuclear engineering
+      Polymer engineering
+      Engineering physics
+      Security engineering
+      Software engineering
+      Systems engineering
+    Environmental science
+      Environmental technology
+      Fisheries science
+    Forensic science
+    Health science
+      Conservation medicine
+      Dentistry
+      Optometry
+      Medicine
+        Anatomy
+          Human anatomy
+        Dermatology
+        Cardiology
+        Endocrinology
+        Gastroenterology
+        Gynecology
+        Immunology
+        Internal medicine
+        Neurology
+        Ophtmalmology
+        Pathology
+        Pathophysiology
+        Pediatrics
+        Pharmacy
+        Physiology
+        Psychiatry
+        Radiology
+        Toxicology
+        Urology
+      Nutrition
+      Nursing
+      Pharmacology
+      Physical therapy
+      Veterinary medicine
+    Applied linguistics
+    Management
+      Accouting
+      Outline of management
+      Business strategy
+      Finance
+      Marketing
+      Organizational behavior
+      Operations
+    Applied Mathematics
+    Microtechnology
+    Military science
+      Military organization
+      Military education and training
+      Military history
+      Military engineering
+      Military strategy and tactics
+    Applied physics
+      Optics
+      Nanotechnology
+      Nuclear technology
+    Space science
+      Astronautics
+      Astronomy
+      Space exploration
+    Spatial science
+      GIS / Geographic information system
+      Remote sensing
+      Photogrammetry

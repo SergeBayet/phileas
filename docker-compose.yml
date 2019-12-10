@@ -6,12 +6,12 @@
       environment:
         NODE_ENV: "development"
         APP_PORT: 12345
-        
       volumes:
         - "./package.json:/src/app/package.json"
         - "./node_modules:/src/app/node_modules"
         - "./bin:/src/app/bin"
         - "./.env:/src/app/.env"
+        - "./_data:/src/app/bin/server/_data"
       expose:
         - "12345"
         - "9229"
