@@ -9,4 +9,17 @@ const CategorySchema = new Schema({
   parents: [{ type: Schema.Types.ObjectId, ref: 'Category' }]
 }, { collection: 'categories' });
 
+// Static method to retrieve children of a category
+
+CategorySchema.statics.getChildren = function (idCategory) {
+  return new Promise((resolve, reject) => {
+    this.find({ parents: idCategory }, (err, docs) => {
+      if (err) {
+        return reject(err)
+      }
+      resolve(docs)
+    })
+  })
+}
+
 export default model("Category", CategorySchema);
