@@ -19,11 +19,25 @@ export async function importCategories(req, res, next) {
   console.log('ici');
   let categories = fs.readFileSync(path.resolve(__dirname, '../_data/categories.txt'), 'utf8');
   let lemmas = categories.toLowerCase().split(/\n|\//).map(x => x.trim().split(/(\W)/g));
-  let toSave = [];
 
+  const getWf = async function (token) {
+    let ids = [];
+    for (let j = 0; j < token.length; j++) {
+      await WrittenForm.findOne({ label: token[j] }, function (err, doc) {
+        ids.push(doc._id);
+      });
+    }
+    return ids;
+  }
 
+  for (let i = 0; i < lemmas.length; i++) {
+    let ids = await getWf(lemmas[i]);
+    await Lemmas.create({ lang: 'en', written_forms: ids }, function (err, doc) {
 
-  await Promise.all(
+    });
+  }
+
+  /* await Promise.all(
     lemmas.map(async el => {
       let ids = [];
       await Promise.all(
@@ -38,15 +52,16 @@ export async function importCategories(req, res, next) {
           })
         })
       );
-
       Promise.resolve();
       console.log(ids);
+
+      Lemmas.create({ lang: 'en', written_forms: ids }, function (err, doc) {
+
+      });
     }
-    ));
+    )); */
 
-  console.log(ids);
-
-  // res.json(ids);
+  res.json('ok');
 
 }
 
