@@ -18,18 +18,19 @@ const UserSchema = new Schema({
     type: String,
     trim: true,
     required: [true, 'name is required'],
-    min: 6,
-    max: 255
+    minLength: 6,
+    maxLength: 255
   },
   email: {
-    type: String, trim: true,
+    type: String,
+    trim: true,
     validate: {
       validator: email => EmailValidator.validate(email),
       message: props => `${props.value} is not a valid email!`
     },
     required: [true, 'email is required'],
     unique: true,
-    max: 255
+    maxLength: 255
   },
   password: {
     type: String,

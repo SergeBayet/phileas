@@ -92,7 +92,7 @@ export function getById(req, res, next) {
 }
 
 export function updateById(req, res, next) {
-  User.findByIdAndUpdate(req.params.id, { $set: req.body }, (err, user) => {
+  User.findByIdAndUpdate(req.query.id, { $set: req.body }, (err, user) => {
     if (err) {
       res.json({ status: "error", message: "User id doesn't exist", data: null });
       return;

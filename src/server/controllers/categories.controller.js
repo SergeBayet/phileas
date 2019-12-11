@@ -4,7 +4,10 @@ import Lemmas from "../models/lemmas.model";
 let fs = require('fs');
 let path = require('path');
 
+
+
 export function tokenize(file) {
+  file = 'categories.txt';
   let tokens = fs.readFileSync(path.resolve(__dirname, '../_data/' + file), 'utf8');
   let wf = [...new Set(tokens.toLowerCase().split(/(\W)/g))].map(x => { return { label: x } });
   WrittenForm.collection.insert(wf, function (err, docs) {
@@ -15,15 +18,24 @@ export function tokenize(file) {
     }
   });
 }
+export function getLemma(req, res, next) {
+  Lemmas.getLemma(req.query.id).then(doc => {
+    res.json(doc);
+  }).catch(err => {
+    res.json('error');
+  });
+}
 export async function importCategories(req, res, next) {
   console.log('ici');
   let categories = fs.readFileSync(path.resolve(__dirname, '../_data/categories.txt'), 'utf8');
   let lemmas = categories.toLowerCase().split(/\n|\//).map(x => x.trim().split(/(\W)/g));
 
-  const getWf = async function (token) {
+  const getWf = async function (syntagm) {
     let ids = [];
-    for (let j = 0; j < token.length; j++) {
-      await WrittenForm.findOne({ label: token[j] }, function (err, doc) {
+    for (let j = 0; j < syntagm.length; j++) {
+      console.log(`-${syntagm[j]}-`)
+      await WrittenForm.findOne({ label: { $eq: `${syntagm[j]}` } }, function (err, doc) {
+        console.log('-' + syntagm[j] + '- --> -' + doc.label + '-');
         ids.push(doc._id);
       });
     }
@@ -36,36 +48,12 @@ export async function importCategories(req, res, next) {
 
     });
   }
-
-  /* await Promise.all(
-    lemmas.map(async el => {
-      let ids = [];
-      await Promise.all(
-
-        el.map(async token => {
-          await WrittenForm.findOne({ label: token }, function (err, doc) {
-            if (err) {
-              console.log(err);
-            }
-
-            ids.push(doc._id);
-          })
-        })
-      );
-      Promise.resolve();
-      console.log(ids);
-
-      Lemmas.create({ lang: 'en', written_forms: ids }, function (err, doc) {
-
-      });
-    }
-    )); */
-
   res.json('ok');
 
 }
 
 export function test(req, res, next) {
+
   let idCategory = req.query.id;
   Category.getParents(idCategory)
     .then(children => {
