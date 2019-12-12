@@ -26,16 +26,14 @@ export function getLemma(req, res, next) {
   });
 }
 export async function importCategories(req, res, next) {
-  console.log('ici');
+
   let categories = fs.readFileSync(path.resolve(__dirname, '../_data/categories.txt'), 'utf8');
   let lemmas = categories.toLowerCase().split(/\n|\//).map(x => x.trim().split(/(\W)/g));
 
   const getWf = async function (syntagm) {
     let ids = [];
     for (let j = 0; j < syntagm.length; j++) {
-      console.log(`-${syntagm[j]}-`)
-      await WrittenForm.findOne({ label: { $eq: `${syntagm[j]}` } }, function (err, doc) {
-        console.log('-' + syntagm[j] + '- --> -' + doc.label + '-');
+      await WrittenForm.findOne({ label: syntagm[j] }, function (err, doc) {
         ids.push(doc._id);
       });
     }
@@ -53,7 +51,17 @@ export async function importCategories(req, res, next) {
 }
 
 export function test(req, res, next) {
+  let id = req.query.id;
+  let label = req.query.label;
+  WrittenForm.updateById(id, label, (err, doc) => {
+    if (err) {
+      res.json(err.result);
+    }
+    res.json(doc.result);
+  })
 
+
+  /* 
   let idCategory = req.query.id;
   Category.getParents(idCategory)
     .then(children => {
@@ -62,7 +70,7 @@ export function test(req, res, next) {
     })
     .catch(err => {
       res.json({ status: "error", message: err, data: null });
-    });
+    }); */
 }
 export function getById(req, res, next) {
 

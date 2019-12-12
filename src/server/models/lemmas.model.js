@@ -10,7 +10,7 @@ const LemmaSchema = new Schema({
     }
   ]
 }, { collection: 'lemmas' });
-
+LemmaSchema.index({ written_forms: 1 }, { unique: true });
 LemmaSchema.statics.getLemma = function (idLemma) {
   return new Promise((resolve, reject) => {
     this.findOne({ _id: idLemma }, { written_forms: true }).populate("written_forms").exec((err, docs) => {
